@@ -24,13 +24,12 @@ class InviteController extends Controller
             'data' => $inviteCode->save()
         ]);
     }
-
+//for oracle change 0309
     public function details(Request $request)
     {
-        //oracle for change
         return response([
             'data' => CommissionLog::where('invite_user_id', $request->session()->get('id'))
-            ->where('get_amount', '>', 0)
+            ->where('get_amount', '>', 0) 
                 ->select([
                     'id',
                     'trade_no',
