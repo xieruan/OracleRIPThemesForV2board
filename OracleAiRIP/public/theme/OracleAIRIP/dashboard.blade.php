@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <title>{{$title}}</title>
-    <script type="module" crossorigin src="/theme/{{$theme}}/assets/index.6653795b.js?v={{$version}}"></script>
-    <link rel="modulepreload" href="/theme/{{$theme}}/assets/vendor.cc981c55?v={{$version}}">
-    <link rel="stylesheet" href="/theme/{{$theme}}/assets/index.7979caf7.css?v={{$version}}">
+    <script type="module" crossorigin src="/theme/{{$theme}}/assets/index.af7450cd.js?v={{$version}}"></script>
+    <link rel="modulepreload" href="/theme/{{$theme}}/assets/vendor.cc981c55.js?v={{$version}}">
+    <link rel="stylesheet" href="/theme/{{$theme}}/assets/index.bcd66907.css?v={{$version}}">
 
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700"> -->
