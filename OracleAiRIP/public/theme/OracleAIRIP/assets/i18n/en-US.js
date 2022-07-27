@@ -112,7 +112,7 @@ window.settings.i18n['en-US'] = {
   'order.amount': 'Amount',
   'order.traffic': 'Transfer Data',
   'order.discount': 'Discount',
-  'order.surplus': 'Converted',
+  'order.surplus': 'Old subscription converted',
   'order.refund': 'Refund',
   'order.balance_pay': 'Pay with Balance',
   'order.pay_method': 'Payment Method',
@@ -321,6 +321,7 @@ window.settings.i18n['en-US'] = {
   'Placing an order':'Placing an order....',
   'Canceling':'Canceling....',
   'Cancel success':'Cancel success',
+  'Cancel order Warning':'If you have already paid, canceling the order may cause the payment to fail. Are you sure you want to cancel the order?',
   'There are no orders to cancel':'There are no orders to cancel!',
   'Unable to pay':'Unable to pay, please cancel this order!',
   'Traffic':'Traffic',
@@ -336,6 +337,7 @@ window.settings.i18n['en-US'] = {
   'Interest tips':'Interest tips: this site does not support refund. Please try it before purchasing',
   'Total order amount':'Total order amount',
   'Balance offset':'Balance offset',
+  'Payment fee':'Payment fee',
   'Recommend':'Recommend',
   'Payment process':'Difficulties in the payment process? Please feel free to contact us',
   'Order':'Order',
@@ -384,6 +386,6 @@ window.settings.i18n['en-US'] = {
   'This subscription cannot be renewed. Only new users are allowed to purchase it': 'This subscription cannot be renewed. Only new users are allowed to purchase it',
   'Reset current month flow': 'Reset current month flow',
   'The flow details only retain the data of recent months for query.': 'The flow details only retain the data of recent months for query.',
-  'The sum of flows with the same deduction rate in a day is one record':'The sum of flows with the same deduction rate in a day is one record(real time)',
+  'The sum of flows with the same deduction rate in a day is one record':'The sum of flows with the same deduction rate in a day is one record',
   'Fee deduction rate': 'Fee deduction rate'
 }

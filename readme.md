@@ -1,4 +1,7 @@
-<img src="https://avatars.githubusercontent.com/u/56885001?s=200&v=4" alt="logo" width="130" height="130" align="right"/>
+<img src="pleaseDeleteThisFile/OracleAIRIP.png" alt="logo" width="130" height="130" align="right"/>
+
+#### Warning Warning Warning!!!!
+this themes is only for [v2board-dev1.6.1-49d9c45](https://github.com/v2board/v2board/tree/49d9c453d80439ac98ba6445062e0dc40719e52e)  
 
 # **V2Board**
 

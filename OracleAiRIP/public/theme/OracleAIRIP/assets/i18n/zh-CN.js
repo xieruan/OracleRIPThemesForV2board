@@ -109,7 +109,7 @@ window.settings.i18n['zh-CN'] = {
   'order.amount': '金额',
   'order.traffic': '流量',
   'order.discount': '折扣',
-  'order.surplus': '折抵',
+  'order.surplus': '旧套餐抵扣',
   'order.refund': '退款',
   'order.balance_pay': '余额支付',
   'order.pay_method': '支付方式',
@@ -332,6 +332,7 @@ window.settings.i18n['zh-CN'] = {
   'Interest tips':'权益提示: 本站不支持退款, 请试用后再购买',
   'Traffic':'流量',
   'Balance offset':'余额抵扣',
+  'Payment fee':'支付手续费',
   'Discount offset':'优惠抵扣',
   'Total order amount':'订单金额总计',
   'Recommend':'推荐',
@@ -342,6 +343,7 @@ window.settings.i18n['zh-CN'] = {
   'FAQ':'常见问题解答',
   'Go to pay':'前往付款',
   'Cancel order':'取消付款',
+  'Cancel order Warning':'如果您已经付款，取消订单可能会导致支付失败，确定要取消订单吗?',
   'You will not be charged for the time being':'您暂时不会被收费',
   'Warning':'危险操作: ',
   'Plan Change Warning':'您目前的套餐将会被此套餐覆盖消失!请确认是否继续购买! 如想更换请联系客服协助!',
@@ -407,6 +409,6 @@ window.settings.i18n['zh-CN'] = {
   'This subscription cannot be renewed. Only new users are allowed to purchase it': '该订阅无法续费，仅允许新用户购买',
   'Reset current month flow': '重置当月流量 ',
   'The flow details only retain the data of recent months for query.': '流量明细仅保留近月数据以供查询。',
-  'The sum of flows with the same deduction rate in a day is one record':'一天内相同扣费倍率的流量总和为一条记录(实时)',
+  'The sum of flows with the same deduction rate in a day is one record':'一天内相同扣费倍率的流量总和为一条记录',
   'Fee deduction rate': '扣费倍率'
 }

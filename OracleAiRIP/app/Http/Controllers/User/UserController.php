@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\User\UserTransfer;
 use App\Http\Requests\User\UserUpdate;
 use App\Http\Requests\User\UserChangePassword;
+use App\Services\UserService;
 use App\Utils\CacheKey;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -80,13 +81,14 @@ class UserController extends Controller
             'data' => $user
         ]);
     }
-//for oracle change 0309
+    
+// 主题修改:/www/wwwroot/flybod/app/Http/Controllers/User/UserController.php 88:93
     public function getStat(Request $request)
     {
         $stat = [
             Order::where('status', 0)
                 ->where('user_id', $request->session()->get('id'))
-                  ->select([
+                ->select([
                     'trade_no',
                     'payment_id'
                     ])
@@ -124,8 +126,9 @@ class UserController extends Controller
                 abort(500, __('Subscription plan does not exist'));
             }
         }
-        $user['subscribe_url'] = Helper::getSubscribeHost() . "/api/v1/client/subscribe?token={$user['token']}";
-        $user['reset_day'] = $this->getResetDay($user);
+        $user['subscribe_url'] = Helper::getSubscribeUrl("/api/v1/client/subscribe?token={$user['token']}");
+        $userService = new UserService();
+        $user['reset_day'] = $userService->getResetDay($user);
         return response([
             'data' => $user
         ]);
@@ -143,7 +146,7 @@ class UserController extends Controller
             abort(500, __('Reset failed'));
         }
         return response([
-            'data' => config('v2board.subscribe_url', config('v2board.app_url', env('APP_URL'))) . '/api/v1/client/subscribe?token=' . $user->token
+            'data' => Helper::getSubscribeUrl('/api/v1/client/subscribe?token=' . $user->token)
         ]);
     }
 
@@ -187,36 +190,6 @@ class UserController extends Controller
             'data' => true
         ]);
     }
-
-    private function getResetDay(User $user)
-    {
-        if ($user->expired_at <= time() || $user->expired_at === NULL) return null;
-        // if reset method is not reset
-        if (isset($user->plan->reset_traffic_method) && $user->plan->reset_traffic_method === 2) return null;
-        $day = date('d', $user->expired_at);
-        $today = date('d');
-        $lastDay = date('d', strtotime('last day of +0 months'));
-
-        if ((int)config('v2board.reset_traffic_method') === 0 ||
-            (isset($user->plan->reset_traffic_method) && $user->plan->reset_traffic_method === 0))
-        {
-            return $lastDay - $today;
-        }
-        if ((int)config('v2board.reset_traffic_method') === 1 ||
-            (isset($user->plan->reset_traffic_method) && $user->plan->reset_traffic_method === 1))
-        {
-            if ((int)$day >= (int)$today && (int)$day >= (int)$lastDay) {
-                return $lastDay - $today;
-            }
-            if ((int)$day >= (int)$today) {
-                return $day - $today;
-            } else {
-                return $lastDay - $today + $day;
-            }
-        }
-        return null;
-    }
-
 
     public function getQuickLoginUrl(Request $request)
     {

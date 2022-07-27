@@ -9,8 +9,8 @@ use App\Http\Controllers\Controller;
 
 class CommController extends Controller
 {
-    //for oracle change 0309
     public function config()
+// 主题修改 /www/wwwroot/demos/app/Http/Controllers/User/CommController.php :23
     {
         return response([
             'data' => [
@@ -21,7 +21,7 @@ class CommController extends Controller
                 'withdraw_close' => (int)config('v2board.withdraw_close_enable', 0),
                 'currency' => config('v2board.currency', 'CNY'),
                 'currency_symbol' => config('v2board.currency_symbol', '¥'),
-                'try_out_plan_id' => (int)config('v2board.try_out_plan_id', 0)
+                'try_out_plan_id' => (int)config('v2board.try_out_plan_id', 0),
             ]
         ]);
     }
